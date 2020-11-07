@@ -38,14 +38,14 @@
     mode: 0600
   notify: run dehydrated
 
-- import_tasks: hooks.yml
-
 - import_tasks: domain_config.yml
 
 - name: Include dns-01-lexicon.yml
   include_tasks: dns-01-lexicon.yml
   when:
     - dehydrated_use_lexicon
+
+- import_tasks: hooks.yml
 
 - name: Install cronjob
   cron:
