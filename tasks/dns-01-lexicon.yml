@@ -39,11 +39,7 @@
     group: root
     state: link
   with_items:
-    - { src: "{{ dehydrated_lexicon_venv }}/bin/chardetect", dest: "{{ lexicon_path }}/chardetect" }
-    - { src: "{{ dehydrated_lexicon_venv }}/bin/futurize", dest: "{{ lexicon_path }}/futurize" }
     - { src: "{{ dehydrated_lexicon_venv }}/bin/lexicon", dest: "{{ lexicon_path }}/lexicon" }
-    - { src: "{{ dehydrated_lexicon_venv }}/bin/pasteurize", dest: "{{ lexicon_path }}/pasteurize " }
-    - { src: "{{ dehydrated_lexicon_venv }}/bin/tldextract", dest: "{{ lexicon_path }}/tldextract" }
   vars:
     lexicon_path: '/usr/local/bin'
 
